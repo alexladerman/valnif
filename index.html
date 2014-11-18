@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="valnif.js" charset="utf-8"></script>
+<script>
+
+window.onload = function() {
+  addFormOnSubmitEventListener();
+  document.getElementById('NIF').value = "B92122312";
+  //form = document.getElementById('form').submit();
+};
+
+function addFormOnSubmitEventListener() {
+  var form = document.getElementById('form');
+  var result = document.getElementById('result');
+  form.addEventListener('submit', function(e){
+    var nif = form.elements['NIF'].value;
+    if(checkNif(nif) > 0) {
+      result.innerText = 'valid';
+    } else {
+      result.innerText = 'invalid';
+    }
+    e.preventDefault();     
+  });
+
+}
+</script>
+</head>
+<body>
+<h2>ValNIF</h2>
+<form id="form">
+  <label for="NIF">NIF</label>
+  <input id="NIF" name="NIF" type="text">
+  <input type="submit">  
+</form>
+<h2 id="result"></h2>
+</body>
+</html>
