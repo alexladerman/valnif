@@ -10,6 +10,7 @@
 
   function checkNif(paramString)
   { 
+    paramString = paramString.toUpperCase();
     var TAM_NIF = 9;
     var NIF_ERROR = -1;
     var NIF_ERROR_TAMANO = -2;
