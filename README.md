@@ -9,7 +9,7 @@ Programa de Validación de NIF CIF NIE en Javascript
 ```
 
 ```javascript
-if(checkNif(nif) > 0)
+if (checkNif(nif) > 0)
 ```
 
 ## Ejemplo
