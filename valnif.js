@@ -52,7 +52,7 @@
     var k = 0;
     var l1 = 0;
     var l2 = 0;
-    paramString = paramString.trim();
+    paramString = paramString.replace(/^\s+|\s+$/g, '');
     if (paramString.length != 9) {
       return -2;
     }
